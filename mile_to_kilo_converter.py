@@ -1,9 +1,15 @@
 from tkinter import *
 
+def miles_to_km():
+    miles =float(miles_input.get())
+    km = miles * 1.609
+    kilometer_result_label.config(text=f"{km}")
+
 window = Tk()
 window.title("Miles to Kilometer")
+window.config(padx=20, pady=20)
 
-miles_input = Entry()
+miles_input = Entry(width=7)
 miles_input.grid(column=1, row=0)
 
 miles_label = Label(text="Miles")
